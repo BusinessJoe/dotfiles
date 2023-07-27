@@ -123,3 +123,5 @@ export NVM_DIR="$HOME/.nvm"
 
 export PATH="$HOME/WSL2-Linux-Kernel/tools/perf/:$PATH"
 export PATH="$HOME/programs/:$PATH"
+
+export GIT_EDITOR=vim
