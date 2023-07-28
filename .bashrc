@@ -118,3 +118,5 @@ export PATH="$HOME/programs/:$PATH"
 
 export GIT_EDITOR=vim
 export PATH=$PATH:/usr/local/go/bin
+
+export GPG_TTY=$(tty)
