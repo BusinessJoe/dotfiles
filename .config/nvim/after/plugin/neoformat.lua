@@ -7,9 +7,11 @@ vim.api.nvim_create_autocmd({"BufWritePre"}, {
     end
 })
 
-vim.api.nvim_create_autocmd({"BufWritePre"}, {
-    pattern = {"*.py"},
-    callback = function ()
-        vim.cmd.Neoformat("black")
-    end
-})
+-- vim.api.nvim_create_autocmd({"BufWritePre"}, {
+--     pattern = {"*.py"},
+--     callback = function ()
+--         vim.cmd.Neoformat("black")
+--     end
+-- })
+--
+vim.api.nvim_set_keymap("n", "<leader>f", ":Neoformat<CR>", {noremap = true, silent = true})
