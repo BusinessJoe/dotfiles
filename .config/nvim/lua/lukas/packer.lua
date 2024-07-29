@@ -3,7 +3,9 @@
 -- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
 
-return require('packer').startup(function(use)
+local packer = require('packer')
+
+return packer.startup(function(use)
 	-- Packer can manage itself
 	use 'wbthomason/packer.nvim'
 
@@ -48,6 +50,7 @@ return require('packer').startup(function(use)
                 'williamboman/mason.nvim',
                 run = function()
                     pcall(vim.api.nvim_command, 'MasonUpdate')
+                    pcall(vim.api.nvim_command, 'PylspInstall pylsp-mypy')
                 end,
             },
             {'williamboman/mason-lspconfig.nvim'}, -- Optional
@@ -62,6 +65,10 @@ return require('packer').startup(function(use)
     use('sbdchd/neoformat')
 
     use('tpope/vim-obsession')
+
+    use('tpope/vim-commentary')
+
+    use('christoomey/vim-tmux-navigator')
+
+    use('github/copilot.vim')
 end)
-
-
