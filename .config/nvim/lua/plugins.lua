@@ -1,6 +1,11 @@
 return {
-    'nvim-telescope/telescope.nvim',
+    {'nvim-telescope/telescope.nvim', branch = '0.1.x'},
     { 'rose-pine/neovim', name = 'rose-pine', init = function()
+        require('rose-pine').setup({
+            styles = {
+                transparency = true
+            }
+        })
         vim.cmd('colorscheme rose-pine')
     end},
     { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
@@ -27,4 +32,8 @@ return {
     'tpope/vim-commentary',
     'christoomey/vim-tmux-navigator',
     'github/copilot.vim',
+    'mfussenegger/nvim-jdtls',
+    { 'lervag/vimtex',
+        lazy = false,
+    }
 }
