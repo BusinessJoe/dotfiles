@@ -1,5 +1,6 @@
 require("lukas.set")
 require("lukas.remap")
+require("lukas.filetypes")
 --require("lukas.packer")
 require("lukas.lazy")
 require("lukas.vimtex")

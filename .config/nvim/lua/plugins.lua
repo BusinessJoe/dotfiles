@@ -35,5 +35,6 @@ return {
     'mfussenegger/nvim-jdtls',
     { 'lervag/vimtex',
         lazy = false,
-    }
+    },
+    { 'SirVer/ultisnips' },
 }
