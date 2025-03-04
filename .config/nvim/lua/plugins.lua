@@ -1,13 +1,13 @@
 return {
     {'nvim-telescope/telescope.nvim', branch = '0.1.x'},
-    { 'rose-pine/neovim', name = 'rose-pine', init = function()
-        require('rose-pine').setup({
-            styles = {
-                transparency = true
-            }
-        })
-        vim.cmd('colorscheme rose-pine')
-    end},
+    -- { 'rose-pine/neovim', name = 'rose-pine', init = function()
+    --     require('rose-pine').setup({
+    --         styles = {
+    --             transparency = true
+    --         }
+    --     })
+    --     vim.cmd('colorscheme rose-pine')
+    -- end},
     { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
     'nvim-treesitter/playground',
     'theprimeagen/harpoon',
@@ -31,10 +31,17 @@ return {
     'tpope/vim-obsession',
     'tpope/vim-commentary',
     'christoomey/vim-tmux-navigator',
-    'github/copilot.vim',
     'mfussenegger/nvim-jdtls',
     { 'lervag/vimtex',
         lazy = false,
     },
     { 'SirVer/ultisnips' },
+    { 'rhysd/vim-clang-format' },
+    { 'glepnir/galaxyline.nvim', dependencies = {
+        'nvim-tree/nvim-web-devicons' -- Icon support
+    }},
+    {
+        dir = '~/code/nvim-binary-theme',
+        name = 'binary',
+    }
 }
