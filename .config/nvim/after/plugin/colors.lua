@@ -1,1 +1,1 @@
-vim.cmd.colorscheme("binary")
+vim.cmd.colorscheme("bluemarble")

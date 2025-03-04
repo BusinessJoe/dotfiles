@@ -41,7 +41,7 @@ return {
         'nvim-tree/nvim-web-devicons' -- Icon support
     }},
     {
-        dir = '~/code/nvim-binary-theme',
-        name = 'binary',
+        dir = '~/code/bluemarble',
+        name = 'bluemarble',
     }
 }
