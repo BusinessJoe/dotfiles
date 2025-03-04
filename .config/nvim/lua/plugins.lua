@@ -40,8 +40,5 @@ return {
     { 'glepnir/galaxyline.nvim', dependencies = {
         'nvim-tree/nvim-web-devicons' -- Icon support
     }},
-    {
-        dir = '~/code/bluemarble',
-        name = 'bluemarble',
-    }
+    { 'BusinessJoe/bluemarble.nvim' },
 }
