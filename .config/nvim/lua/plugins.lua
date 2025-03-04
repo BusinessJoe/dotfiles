@@ -41,4 +41,5 @@ return {
         'nvim-tree/nvim-web-devicons' -- Icon support
     }},
     { 'BusinessJoe/bluemarble.nvim' },
+    -- { dir = '~/code/bluemarble.nvim' },
 }

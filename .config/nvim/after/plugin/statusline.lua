@@ -2,7 +2,6 @@ local colors = require('bluemarble.palette').dark()
 local gl = require('galaxyline')
 local gls = gl.section
 
-
 local buffer_not_empty = function()
     if vim.fn.empty(vim.fn.expand('%:t')) ~= 1 then
         return true
