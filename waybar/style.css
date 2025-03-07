@@ -1,0 +1,112 @@
+@define-color bg #111111;
+@define-color brightbg #1a1a1a;
+@define-color fg #dedede;
+@define-color highlight #202020;
+@define-color black #919191;
+@define-color red #e17373;
+@define-color green #94b978;
+@define-color yellow #ffb97b;
+@define-color blue #96bddb;
+@define-color magenta #9c644c;
+@define-color cyan #00988e;
+@define-color white #dedede;
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "Inconsolata";
+    font-weight: bold;
+    font-size: 14px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: @bg;
+    color: @white;
+}
+
+#window {
+}
+/*
+#workspaces {
+    padding: 0 5px;
+}
+*/
+
+#workspaces button {
+    padding: 0 5px;
+    background: @bg;
+    color: @white;
+    /* border-top: 2px solid transparent; */
+}
+
+#workspaces button.active {
+    background: @brightbg;
+    color: @blue;
+    border-top: 2px solid @blue;
+}
+
+#workspaces button.urgent {
+    background: @red;
+}
+
+#clock, #battery, #cpu, #memory, #network, #pulseaudio, #custom-spotify, #tray, #mode {
+    padding: 0 3px;
+    margin: 0 2px;
+}
+
+#clock {
+    font-weight: bold;
+}
+
+#battery {
+}
+
+#battery icon {
+    color: red;
+}
+
+#battery.charging {
+}
+
+@keyframes blink {
+    to {
+        background-color: @white;
+        color: @black;
+    }
+}
+
+#battery.warning:not(.charging) {
+    color: white;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#cpu {
+}
+
+#memory {
+}
+
+#network {
+}
+
+#network.disconnected {
+    background: @red;
+}
+
+#pulseaudio {
+}
+
+#pulseaudio.muted {
+}
+
+#custom-spotify {
+    color: rgb(102, 220, 105);
+}
+
+#tray {
+}
